@@ -9,6 +9,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Axios from "../../../lib/axios";
 import Avatar from '@material-ui/core/Avatar';
+import BeersServices from "../../../services/beersServices";
 
 const useStyles = makeStyles({
   table: {
@@ -24,7 +25,7 @@ function TableListBeers() {
 
   useEffect(async () => {
     let result = null
-    result = await Axios.get('https://api.punkapi.com/v2/beers') // fetch our beers
+    result = await BeersServices.get('https://api.punkapi.com/v2/beers')
     setBeersFetched(result)
   }, [])
 
