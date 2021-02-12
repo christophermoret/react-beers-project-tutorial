@@ -25,7 +25,7 @@ function TableListBeers() {
 
   useEffect(async () => {
     let result = null
-    result = await BeersServices.get('https://api.punkapi.com/v2/beers')
+    result = await BeersServices.getBeers('https://api.punkapi.com/v2/beers')
     setBeersFetched(result)
   }, [])
 

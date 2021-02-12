@@ -4,10 +4,10 @@ import Axios from "../lib/axios";
 class BeersServices {
 
   /**
-   *
-   * @return {Promise<void>}
+   * Get Service Beers
+   * @return {Promise<*>}
    */
-  static async GetBeers (path) {
+  static async getBeers (path) {
     try{
       let result = null
       result = Axios.get(path)
