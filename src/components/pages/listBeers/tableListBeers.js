@@ -25,7 +25,6 @@ function TableListBeers() {
   useEffect(async () => {
     let result = null
     result = await Axios.get('https://api.punkapi.com/v2/beers') // fetch our beers
-    console.log("Result Effect State", result)
     setBeersFetched(result)
   }, [])
 
